@@ -279,7 +279,6 @@ const key_override_t delete_key_override = ko_make_basic(MOD_LSFT, KC_BSPC, KC_D
 
 // This globally defines all key overrides to be used
 const key_override_t **key_overrides = (const key_override_t *[]){
-	&delete_key_override,
-	NULL // Null terminate the array of overrides!
+	&delete_key_override
 };
 
