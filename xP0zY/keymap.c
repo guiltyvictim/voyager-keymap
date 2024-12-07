@@ -288,21 +288,3 @@ const key_override_t delete_key_override = ko_make_basic(MOD_MASK_SHIFT, LT(5,KC
 const key_override_t **key_overrides = (const key_override_t *[]){
 	&delete_key_override
 };
-
-bool process_detected_host_os_kb(os_variant_t detected_os) {
-    if (!process_detected_host_os_user(detected_os)) {
-        return false;
-    }
-    switch (detected_os) {
-        case OS_IOS:
-        case OS_LINUX:
-        case OS_UNSURE:
-        case OS_WINDOWS:
-            break;
-        case OS_MACOS:
-            layer_move(1);
-            break;
-    }
-    
-    return true;
-}
