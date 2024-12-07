@@ -294,12 +294,12 @@ bool process_detected_host_os_kb(os_variant_t detected_os) {
         return false;
     }
     switch (detected_os) {
-        case OS_MACOS:
         case OS_IOS:
         case OS_LINUX:
         case OS_UNSURE:
-            break;
         case OS_WINDOWS:
+            break;
+        case OS_MACOS:
             layer_move(1);
             break;
     }
